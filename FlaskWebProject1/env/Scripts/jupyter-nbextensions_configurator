@@ -1,0 +1,6 @@
+#!C:\Users\Gintoki\source\repos\FlaskWebProject1\FlaskWebProject1\env\Scripts\python.exe
+
+from jupyter_nbextensions_configurator.application import main
+
+if __name__ == '__main__':
+    main()

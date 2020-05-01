@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <div>
+        <br>
+        <h1>Bank Marketing</h1>
+        <div class="panel panel-primary">
+            <div class="panel-heading"><h3 class="panel-title"> Abstract: </h3></div>
+            <div class="panel-body">
+                The data is related with direct marketing campaigns (phone calls)
+                of a Portuguese banking institution. The classification goal is to predict
+                if the client will subscribe a term deposit (variable y).
+            </div>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading"><h3 class="panel-title"> Data Set Information: </h3></div>
+            <div class="panel-body">
+                The data is related with direct marketing campaigns of
+                a Portuguese banking institution. The marketing campaigns were based on
+                phone calls. Often, more than one contact to the same client was required,
+                in order to access if the product (bank term deposit) would be
+                ('yes') or not ('no') subscribed.
+            </div>
+            <div style="overflow-x:auto;">
+                {% for table in tables %}
+                <div style="font-size: 12px; ">
+                    {{ table|safe }}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        
+        <br>
+        <br>
+        <!--<form action="" method="post" enctype="multipart/form-data">
+    </form>-->
+    </div>
+
+
+    {% endblock %}

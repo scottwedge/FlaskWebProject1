@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <div>
+        <br>
+        <div class="well">
+            <h3><strong> Bank client data Analysis and Categorical Treatment</strong></h3>
+            <br />
+            <ul>
+                <li>Work with the atributes related to bank clients</li>
+                <li>To make things more clear, we are going to edit datasets</li>
+            </ul>
+            <br />
+            <p>
+                <h5><strong> Categorical variables:</strong></h5>
+                <div style="overflow-x:auto;">
+                    {% for table in tables %}
+                    <div style="font-size: 12px; ">
+                        {{ table|safe }}
+                    </div>
+                    {% endfor %}
+                </div>
+                <br />
+                jobs: {{jobs}}
+                <br />
+                marital: {{marital}}
+                <br />
+                education: {{education}}
+                <br />
+                default: {{default}}
+                <br />
+                housing: {{housing}}
+                <br />
+                loan: {{loan}}
+                <br />
+                <br />
+                <h5><strong> Age: </strong></h5>
+                <ul>
+                    <li>Work with the atributes related to bank clients</li>
+                </ul>
+                <br />
+                Minimum: {{age_min}}
+                <br />
+                <br />
+                Maximum: {{age_max}}
+                <br />
+                <br />
+                Standard derivation: {{age_std}}
+                <br />
+                <br />
+                Mean: {{age_mean}}
+                <br />
+                <br />
+                <div>
+                    <img src="/plot_age1.png" style="width: 100%" class="img-rounded" />
+                    <hr />
+                    <img src="/plot_age2.png" style="width: 100%" class="img-rounded" />
+                </div>
+                <br />
+                <br />
+                <br />
+                Quartile 1: {{quart1}}
+                <br />
+                <br />
+                Quartile 2: {{quart2}}
+                <br />
+                <br />
+                Quartile 3: {{quart3}}
+                <br />
+                <br />
+                Quartile 4: {{quart5}}
+            </p>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
