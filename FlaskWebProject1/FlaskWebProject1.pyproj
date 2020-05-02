@@ -51,6 +51,7 @@
     <Content Include="FlaskWebProject1\templates\knn.html" />
     <Content Include="FlaskWebProject1\templates\linear.html" />
     <Content Include="FlaskWebProject1\templates\xgboost.html" />
+    <None Include="FolderProfile.pubxml" />
     <Content Include="libman.json" />
     <Content Include="requirements.txt" />
     <Content Include="FlaskWebProject1\static\content\bootstrap.css" />
