@@ -2,13 +2,38 @@
 
 {% block content %}
 
-<div>
-    <br>
-    {% filter markdown %}
-    Your Markdown
-    =============
-    {% endfilter %}
-</div>
+    <div>
+        <div class="well">
+            <h3><strong> XGBOOSTING algorithm: </strong></h3>
+            <br />
+            <ul>
+                <li>
+                    Gradient boosting is a machine learning technique for <br />
+                    regression and classification problems, which produces <br />
+                    a prediction model in the form of an ensemble of weak <br />
+                    prediction models, typically decision trees. <br />
+                </li>
+                <li>
+                    It builds the model in a stage-wise fashion like other boosting methods do, <br />
+                    and it generalizes them by allowing optimization of an arbitrary differentiable loss function.
+                </li>
+            </ul>
+            <h3><strong> Confusion Matrix:</strong></h3>
+            <br />
+            <h5><strong> Confusion Matrix Array:</strong></h5>
+            {{conf_xg}}
+            <br />
+            <br />
+            <h5><strong> Confusion Matrix Seaborn:</strong></h5>
+            <div>
+                <img src="/plot_xgboost_conf.png" style="width: 100%" class="img-rounded" />
+            </div>
+            <br />
+            <h3><strong> Accuracy: {{accuracy_xg}}</strong></h3>
+            <br />
+
+        </div>
+    </div>
 
 
 {% endblock %}

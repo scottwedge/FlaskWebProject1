@@ -3,11 +3,33 @@
 {% block content %}
 
 <div>
-    <br>
-    {% filter markdown %}
-    Your Markdown
-    =============
-    {% endfilter %}
+    <div class="well">
+        <h3><strong> KNN algorithm: </strong></h3>
+        <br />
+        <ul>
+            <li>
+                K Nearest Neighbour is a simple algorithm that stores <br />
+                all the available cases and classifies the new data <br />
+                or case based on a similarity measure. <br />
+            </li>
+            <li>It is mostly used to classifies a data point based on how its neighbours are classified.</li>
+        </ul>
+        <h3><strong> Confusion Matrix:</strong></h3>
+        <br />
+        <h5><strong> Confusion Matrix Array:</strong></h5>
+        {{conf}}
+        <br />
+        <br />
+        <h5><strong> Confusion Matrix Seaborn:</strong></h5>
+        <div>
+            <img src="/plot_knn_conf.png" style="width: 100%" class="img-rounded" />
+        </div>
+        <br />
+        <h3><strong> Accuracy: {{accuracy}}</strong></h3>
+        <br />
+
+    </div>
 </div>
+
 
 {% endblock %}

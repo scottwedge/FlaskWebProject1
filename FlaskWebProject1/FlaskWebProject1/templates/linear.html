@@ -2,13 +2,60 @@
 
 {% block content %}
 
-<div>
-    <br>
-    {% filter markdown %}
-    Your Markdown
-    =============
-    {% endfilter %}
-</div>
+    <div>
+        <div class="well">
+            <h3><strong> Linear regression algorithm: </strong></h3>
+            <br />
+            <ul>
+                <li>
+                    Linear regression is used for finding linear relationship  <br />
+                    between target and one or more predictors.
+                <li>
+                    The most common method for fitting a regression line is the method of least-squares.  <br />
+                    This method calculates the best-fitting line for the observed data by  <br />
+                    minimizing the sum of the squares of the vertical deviations  <br />
+                    from each data point to the line.
+                </li>
+            </ul>
+            <h3><strong> Linear regression's metrics and coefficient:</strong></h3>
+            <br />
+            <h5><strong> Metrics:</strong></h5>
+            <h5>R-squared is a statistical measure of how close the data are to the fitted regression line. </h5>
+            <h5>
+                In general, the higher the R-squared, the better the model fits your data. <br />
+            </h5>
+            <h5><strong>R2: {{r2}}</strong></h5>
+            <br />
+            <br />
+            <h5>MAE is the average of the absolute difference between the predicted values and observed value. </h5>
+            <h5>A MAE of 0 means that your model is a perfect predictor of the outputs.</h5>
+            <h5><strong>MAE: {{mae}}</strong></h5>
+            <br />
+            <br />
+            <h5>
+                mean square error is just like the MAE,  <br />
+                but squares the difference before summing them all <br />
+                instead of using the absolute value.
+            </h5>
+            <h5>A MSE of 0 means that your model is a perfect predictor of the outputs.</h5>
+            <h5><strong>MSE: {{mse}}</strong></h5>
+            <br />
+            <br />
+            <h5>
+                Regression coefficients are estimates<br />
+                of the unknown population parameters and describe<br />
+                the relationship between a predictor variable and the response.<br />
+            </h5>
+            <h5><strong>coef: {{coef}}</strong></h5>
+            <br />
+            <br />
+            <h5><strong> Linear Regression's plot:</strong></h5>
+            <div>
+                <img src="/plot_linear.png" style="width: 100%" class="img-rounded" />
+            </div>
+            <br />
+        </div>
+    </div>
 
 
 {% endblock %}

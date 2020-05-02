@@ -3,11 +3,33 @@
 {% block content %}
 
 <div>
-    <br>
-    {% filter markdown %}
-    Your Markdown
-    =============
-    {% endfilter %}
+    <div class="well">
+        <h3><strong> K-Means algorithm: </strong></h3>
+        <br />
+        <ul>
+            <li>
+                the K-means algorithm identifies k number of centroids,<br />
+                and then allocates every data point to the nearest cluster,<br />
+                while keeping the centroids as small as possible
+            </li>
+            <li>The 'means' in the K-means refers to averaging of the data; that is, finding the centroid.</li>
+        </ul>
+        <h3><strong> Using PCA and plot result: </strong></h3>
+        <br />
+        <h5><strong> Using PCA: </strong></h5>
+        <div>
+            <img src="/plot_kmeans_1.png" style="width: 100%" class="img-rounded" />
+        </div>
+        <br />
+        <h5><strong>Cluster centers: </strong></h5>{{centers}}
+        <br />
+        <h5><strong> Result if we configured centers: </strong></h5>
+        <div>
+            <img src="/plot_kmeans_2.png" style="width: 100%" class="img-rounded" />
+        </div>
+        <br />
+
+    </div>
 </div>
 
 {% endblock %}

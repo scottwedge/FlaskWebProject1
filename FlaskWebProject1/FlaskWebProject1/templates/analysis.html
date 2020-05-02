@@ -13,7 +13,7 @@
             </ul>
             <br />
             <p>
-                <h5><strong> Categorical variables:</strong></h5>
+                <h4><strong> Categorical variables:</strong></h4>
                 <div style="overflow-x:auto;">
                     {% for table in tables %}
                     <div style="font-size: 12px; ">
@@ -22,34 +22,28 @@
                     {% endfor %}
                 </div>
                 <br />
-                jobs: {{jobs}}
+                <h5>jobs: {{unique[0]}}</h5>
                 <br />
-                marital: {{marital}}
+                <h5>marital: {{unique[1]}}</h5>
                 <br />
-                education: {{education}}
+                <h5>education: {{unique[2]}}</h5>
                 <br />
-                default: {{default}}
+                <h5>default: {{unique[3]}}</h5>
                 <br />
-                housing: {{housing}}
+                <h5>housing: {{unique[4]}}</h5>
                 <br />
-                loan: {{loan}}
-                <br />
-                <br />
-                <h5><strong> Age: </strong></h5>
-                <ul>
-                    <li>Work with the atributes related to bank clients</li>
-                </ul>
-                <br />
-                Minimum: {{age_min}}
+                <h5>loan: {{unique[5]}}</h5>
                 <br />
                 <br />
-                Maximum: {{age_max}}
+                <h4><strong> Age: </strong></h4>
                 <br />
+                <h5>Minimum: {{age[0]}}</h5>
                 <br />
-                Standard derivation: {{age_std}}
+                <h5>Maximum: {{age[1]}}</h5>
                 <br />
+                <h5>Standard derivation: {{age[2]}}</h5>
                 <br />
-                Mean: {{age_mean}}
+                <h5>Mean: {{age[3]}}</h5>
                 <br />
                 <br />
                 <div>
@@ -59,21 +53,110 @@
                 </div>
                 <br />
                 <br />
+                <h5>Quartile 1: {{quart[0]}}</h5>
                 <br />
-                Quartile 1: {{quart1}}
+                <h5>Quartile 2: {{quart[1]}}</h5>
+                <br />
+                <h5>Quartile 3: {{quart[2]}}</h5>
+                <br />
+                <h5>Quartile 4: {{quart[3]}}</h5>
+                <br />
+                <h5>Ages above: {{quart[4]}} are outliers</h5>
                 <br />
                 <br />
-                Quartile 2: {{quart2}}
+                <h4><strong> Jobs: </strong></h4>
+                <br />
+                <div>
+                    <img src="/plot_jobs.png" style="width: 100%" class="img-rounded" />
+                </div>
                 <br />
                 <br />
-                Quartile 3: {{quart3}}
+                <h4><strong> Marital: </strong></h4>
+                <br />
+                <div>
+                    <img src="/plot_marital.png" style="width: 100%" class="img-rounded" />
+                </div>
                 <br />
                 <br />
-                Quartile 4: {{quart5}}
+                <h4><strong> Education: </strong></h4>
+                <br />
+                <div>
+                    <img src="/plot_education.png" style="width: 100%" class="img-rounded" />
+                </div>
+                <br />
+                <br />
+                <h4><strong> Default, Housing and Loan: </strong></h4>
+                <br />
+                <div>
+                    <img src="/plot_DHL.png" style="width: 100%" class="img-rounded" />
+                </div>
+
+                <h4><strong> Related with the last contact of the current campaign: </strong></h4>
+                <ul>
+                    <li>Duration is continuous variable and we use this in Analysis</li>
+                    <li>Contact, month and day of week are categorical variables</li>
+                </ul>
+                <br />
+                <br />
+                <div style="overflow-x:auto;">
+                    {% for table in table_related %}
+                    <div style="font-size: 12px; ">
+                        {{ table|safe }}
+                    </div>
+                    {% endfor %}
+                </div>
+                <br />
+                <br />
+                <h5>Kind of Contact: {{unique_related[0]}}</h5>
+                <br />
+                <h5>Which monthis this campaing work: {{unique_related[1]}}</h5>
+                <br />
+                <h5>Which days of week this campaing work: {{unique_related[2]}}</h5>
+                <br />
+                <br />
+                <h4><strong> Duration: </strong></h4>
+                <br />
+                <div>
+                    <img src="/plot_duration.png" style="width: 100%" class="img-rounded" />
+                </div>
+                <br />
+                <h5>Min duration  call in minutes: {{duration_call[0]}}</h5>
+                <br />
+                <h5>Max duration  call in minutes: {{duration_call[1]}}</h5>
+                <br />
+                <h5>STD duration  call in minutes: {{duration_call[2]}}</h5>
+                <br />
+                <h5>Mean duration  call in minutes: {{duration_call[3]}}</h5>
+                <br />
+                <br />
+                <h5>Quartile 1: {{quart_duration[0]}}</h5>
+                <br />
+                <h5>Quartile 2: {{quart_duration[1]}}</h5>
+                <br />
+                <h5>Quartile 3: {{quart_duration[2]}}</h5>
+                <br />
+                <h5>Quartile 4: {{quart_duration[3]}}</h5>
+                <br />
+                <h5>Ages above: {{quart_duration[4]}} are outliers</h5>
+                <br />
+                <br />
+                <h4><strong> Contact, Month, Day of week: </strong></h4>
+                <br />
+                <div>
+                    <img src="/plot_con_day_month.png" style="width: 100%" class="img-rounded" />
+                </div>
+                <br />
+                <h4><strong> Other Attributes: </strong></h4>
+                <div style="overflow-x:auto;">
+                    {% for table in others %}
+                    <div style="font-size: 12px; ">
+                        {{ table|safe }}
+                    </div>
+                    {% endfor %}
+                </div>
             </p>
         </div>
     </div>
-</div>
 
 
 {% endblock %}
