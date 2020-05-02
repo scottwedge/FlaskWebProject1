@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FlaskWebProject1\bank-additional-full.csv" />
+    <Content Include="FlaskWebProject1\static\favicon.ico" />
     <Content Include="FlaskWebProject1\templates\algorithms.html" />
     <Content Include="FlaskWebProject1\templates\analysis.html" />
     <Content Include="FlaskWebProject1\templates\kmeans.html" />
