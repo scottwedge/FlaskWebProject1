@@ -18,7 +18,7 @@ import seaborn  as sns
 
 banks = bankmarketing()
 
-@app.route('/1')
+@app.route('/')
 def home():
 
     Markdown(app)
@@ -70,7 +70,7 @@ def analysis():
          others=[other_attributes.head().to_html(classes='table table-bordered')],
          )
 
-@app.route('/')
+@app.route('/linear')
 def linear():
     r2, mae, mse, coef, linpred = banks.linear()
 
